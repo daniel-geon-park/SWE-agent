@@ -1,0 +1,6 @@
+instances:
+  type: swe_bench
+  subset: lite
+  split: dev
+  slice: :100
+  shuffle: false

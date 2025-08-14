@@ -723,6 +723,7 @@ class LiteLLMModel(AbstractModel):
                 **completion_kwargs,
                 **extra_args,
                 n=n,
+                drop_params=True,  # drop params that are not supported by litellm
             )
         except litellm.exceptions.ContextWindowExceededError as e:
             raise ContextWindowExceededError from e
